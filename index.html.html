@@ -1,0 +1,255 @@
+<style>
+body,
+select {
+  font: 15.447px "calibri light";
+  font-weight: 700;
+}
+
+option {
+  font-weight:700
+}
+
+.projects {
+  width: 85%;
+  margin: 128px auto;
+  /*   border-right: 2px dashed #e78587; */
+  position: relative;
+}
+
+.deadline {
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  font-size: 24px;
+}
+
+.details {
+  border: 1px solid;
+  border-radius:50%;
+}
+
+.milestone {
+  height: 110%;
+  width: 2px;
+  border-left: 1px dashed #ccc;
+  top: -20px;
+  position: absolute;
+}
+
+.milestone:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -14px;
+  font-size: large;
+  color: #aaa;
+}
+
+.twinty-one {
+  left: 0%;
+}
+
+.twinty-two {
+  left: 25%;
+}
+.twinty-three {
+  left: 50%;
+}
+.twinty-four {
+  left: 75%;
+}
+
+.twinty-five {
+  left: 100%;
+}
+
+.inprogress {
+  background: lightblue
+}
+
+.delay-risk {
+  background-color: orange
+}
+
+.ok {
+  background: green;
+  color: white;
+}
+
+.twinty-one:before {
+  content: "2021";
+}
+.twinty-two:before {
+  content: "2022";
+}
+.twinty-three:before {
+  content: "2023";
+}
+.twinty-four:before {
+  content: "2024";
+}
+.twinty-five:before {
+  content: "2025";
+}
+
+hr {
+  width: 5%;
+/*   margin-top: 50px; */
+  border: 1px solid #ccc;
+  margin: 32px 0 32px 0
+}
+
+.header {
+  width: 85%;
+  margin: 16px auto;
+  color: #888;
+}
+
+.project {
+  /*   height:20px; */
+  width: 50%;
+  margin-bottom: 12px;
+  /*   padding: 1px 16px; */
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.project:hover {
+  background: hsl(360, 50%, 50%);
+  /*   transform: scale(120%) */
+}
+
+.base {
+  /*   background: lightblue; */
+/*   border: 1px solid #ccc; */
+  padding: 4px;
+}
+.revision {
+  background: red;
+  width: 25%;
+  color: white;
+  text-align: center;
+}
+.project .base {
+  padding-left: 16px;
+}
+
+</style>
+
+<div class="header">
+  <h1>Pole Navigation Aérienne</h1>
+<h2>PMO</h2>
+  <p>Suivi des projets du portefeuille (Navigation) inscrits dans la stratégie Envol'25.
+    Vous pouvez cliquer sur chaque projet pour avoir plus de détails.
+  </p>
+<p>
+<!--   <hr>
+  <select name="" id="">
+    <option value="">Select a project for details..</option>
+    <option value="1">Réduction de la séparation horizontale 10NM > 7NM dans la FIR Casablanca</option>
+    <option value="2">Implémentation du concept FUA dans la FIR Casablanca</option>
+    <option value="3">Implémentation du concept FRA dans la CTA Casablanca </option>
+    <option value="">Project #4</option>
+    <option value="">Project #5</option>
+    <option value="">Project #6</option>
+    <option value="">Project #7</option>
+    <option value="">Project #8</option>
+    <option value="">Project #9</option>
+    <option value="">Project #10</option>
+    <option value="">Project #11</option>
+    <option value="">Project #12</option>
+    <option value="">Project #13</option>
+    <option value="">Project #14</option>
+    <option value="">Project #15</option>
+    <option value="">Project #16</option>
+    <option value="">Project #17</option>
+    <option value="">Project #18</option>
+    <option value="">Project #19</option>
+    <option value="">Project #20</option>
+    <option value="">Project #21</option>
+  </select>
+</p> -->
+  <hr>
+</div>
+<div class="projects">
+<!--   Years -->
+  <div class="milestone twinty-one"></div>
+  <div class="milestone twinty-two"></div>
+  <div class="milestone twinty-three"></div>
+  <div class="milestone twinty-four"></div>
+  <div class="milestone twinty-five"></div>
+
+  <div class="project">
+    <div class="base pause">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    </div>
+    
+  </div>
+  <div class="project inprogress" style="padding-left:16px; margin-left:300px">
+    <p>Renforcement de la couverture VHF dans la FIR Casabalnca</p>
+  </div>
+  <div class="project ok" style="width:100%">
+    <div class="base" >
+      <p>
+        Mise en oeuvre du plan PBN Maroc
+      </p>
+    </div>
+  </div>
+  <div class="project">
+    <p>Réduction de la séparation horizontale 10NM>7NM.</p>
+  </div>
+  <div class="project">
+    <p>Soluta, tempora beatae nihil cum consectetur officia.</p>
+  </div>
+  <div class="project">
+    <div class="base">
+      <p>Implémentation du concept FUA dans la FIR Casablanca!</p>
+    </div>
+      <div class="revision">
+        <p>
+          3 months <span class="details">&rarr;</span>
+        </p>
+      </div>
+  </div>
+  <div class="project">
+    <p>Quibusdam eaque aspernatur eius enim voluptates minima!</p>
+  </div>
+  <div class="project">
+    <p>Libero animi ex mollitia molestiae beatae ab.</p>
+  </div>
+</div>
+
+<script>
+// let projects = document.querySelectorAll(".project"),
+//   i = projects.length;
+
+// for (j = 0; j < i; j++) {
+//   let w = Math.floor(Math.random() * 100),
+//     c = Math.floor(Math.random() * 2),
+//       color="green"
+//   console.log(c)
+//   switch (c) {
+//     case 0:
+//       color = "green";
+//       break;
+//     case 1:
+//       color= "red";
+//       break;
+//     case 2:
+//       color= "orange";
+//       break;
+//     case 3: 
+//       color: "white";
+//       break;
+//   }
+//   console.log(color);
+//   projects[j].style.backgroundColor = color;
+//   projects[j].style.width = w + "%";
+//   if ((color = "white")) {
+//     projects[j].style.border = "1px solid #ccc";
+//     projects[j].style.color = "black";
+//   }
+// }
+
+
+</script>
